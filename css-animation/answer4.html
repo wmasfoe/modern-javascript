@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .init {
+        width: 0;
+        height: 0;
+        transition: all 3s;
+        text-align: center;
+      }
+      .circle {
+        transition-property: width, height, margin-left, margin-top;
+        transition-duration: 2s;
+        position: fixed;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: red;
+        border-radius: 50%;
+
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        top: 150px;
+        left: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="init"></div>
+    <button onclick="play()">
+      show
+    </button>
+    <script>
+      const dom = document.querySelector('.init')
+      function play() {
+        dom.classList.add('circle')
+      }
+      dom.addEventListener('transitionend', function () {
+        console.log(this);
+        this.innerHTML = 'hello world'
+      })
+    </script>
+  </body>
+</html>
