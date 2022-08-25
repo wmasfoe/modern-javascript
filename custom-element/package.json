@@ -1,0 +1,11 @@
+{
+  "name": "custom-element",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./script/transer.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
